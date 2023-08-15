@@ -87,6 +87,18 @@ public class SendSms {
     public void sendSMSS(String content,String phone) {
 
         Log.e(TAG,"手机"+phone);
+
+        //判断Android版本是否大于23
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            int checkCallPhonePermission = ContextCompat.checkSelfPermission( this.var, Manifest.permission.CALL_PHONE);
+            if (checkCallPhonePermission != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions( this.var, new String[]{Manifest.permission.SEND_SMS}, SEND_SMS);
+                return;
+            } else {
+                this.var.registerReceiver(smsSentReceiver, new IntentFilter(SMS_SENT_ACTION));
+            }
+        }
+
         if (!isEmpty(content) && !isEmpty(phone)) {
             SmsManager manager = SmsManager.getDefault();
 
@@ -112,6 +124,8 @@ public class SendSms {
                     // 短信发送失败
                 }
             }
+
+
         } else {
             Toast.makeText(this.var, "手机号或内容不能为空", Toast.LENGTH_SHORT).show();
             YouleSdkMgr.smeResult.onResult(false);
