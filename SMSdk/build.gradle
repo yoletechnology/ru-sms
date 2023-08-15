@@ -12,7 +12,7 @@ task generateSourcesJar(type: Jar){
 }
 android {
     compileSdk 30
-    buildToolsVersion "30.0.2"
+    buildToolsVersion "30.0.3"
     defaultConfig {
         minSdk 19
         targetSdk 30
@@ -45,7 +45,7 @@ android {
 
                     // You can then customize attributes of the publication as shown below.
                     groupId = 'com.yole.smssdk' // 这个是依赖库的组 idq
-                    artifactId = 'ru-sms' // 依赖库的名称（jitpack 都不会使用到）
+                    artifactId = 'smsdk' // 依赖库的名称（jitpack 都不会使用到）
                     version = versionName
                 }
             }
