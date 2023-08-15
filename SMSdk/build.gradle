@@ -12,12 +12,11 @@ task generateSourcesJar(type: Jar){
 }
 android {
     compileSdk 30
-    buildToolsVersion "30.0.3"
-
+    buildToolsVersion "30.0.2"
     defaultConfig {
-        minSdk 16
+        minSdk 19
         targetSdk 30
-        versionCode 104
+        versionCode 100
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
