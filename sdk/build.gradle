@@ -8,11 +8,11 @@ task generateSourcesJar(type: Jar){
 }
 android {
     compileSdk 30
-    buildToolsVersion "30.0.3"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         minSdk 19
-        targetSdk 30
+        targetSdk 31
         versionCode 100
         versionName "1.0.0"
 
@@ -41,8 +41,8 @@ android {
                     from components.release // 表示发布 release（jitpack 都不会使用到）
 
                     // You can then customize attributes of the publication as shown below.
-                    groupId = 'com.yole.smssdk' // 这个是依赖库的组 idq
-                    artifactId = 'ru-sms' // 依赖库的名称（jitpack 都不会使用到）
+                    groupId = 'com.game.sdk' // 这个是依赖库的组 idq
+                    artifactId = 'sms' // 依赖库的名称（jitpack 都不会使用到）
                     version = versionName
                 }
             }

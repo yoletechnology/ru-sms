@@ -16,7 +16,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StyleRes;
 
-import com.yole.smssdk.R;
+import com.game.sdk.R;
 
 public class LoadingDialog extends Dialog {
     private ImageView iv_ing;
