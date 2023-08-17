@@ -6,6 +6,6 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "SMSdk"
+rootProject.name = "ru-sms"
 include ':app'
-include ':SMSdk'
+include ':sdk'
