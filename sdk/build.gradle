@@ -7,7 +7,7 @@ task generateSourcesJar(type: Jar){
     classifier  'sources'
 }
 android {
-    compileSdk 30
+    compileSdk 31
     buildToolsVersion "30.0.2"
 
     defaultConfig {
